@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Soundstream</string>
+    <string name="api_url">http://192.168.1.105:8888/Soundstream/index.php?controller=api</string>
+    <string name="start_button">Start</string>
+    <string name="status_notConnected">Nicht Verbunden</string>
+    <string name="status_connecting">Verbinde...</string>
+    <string name="status_connected">Verbunden</string>
+    <string name="status_connectionFailed">Verbindung fehlgeschlagen!</string>
+</resources>

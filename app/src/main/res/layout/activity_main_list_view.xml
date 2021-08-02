@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="218dp"
+            android:layout_height="86dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/music_play"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="-2dp">
+
+            <TextView
+                android:id="@+id/songname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Songname" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Artist" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/elapsedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:30" />
+
+                <TextView
+                    android:id="@+id/remainingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-1:41"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/music_play"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cover_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_play"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/cover_image"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_img" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+    </ListView>
+
+
+</LinearLayout>
